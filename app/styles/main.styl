@@ -1,0 +1,203 @@
+/**
+ *  mg-audioPlayer
+ *  (c) elizabethnorthrup415@gmail.com <elizabethnorthrup415@gmail.com>
+ */
+
+base-path = '../'
+
+@import 'base/definitions'
+@import 'base/normalize'
+@import 'base/typography'
+@import 'base/layout'
+
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons")
+@import url("//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700,800")
+html,body
+  background-color: #80D8FF
+  color: #212121
+  position: relative
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+  padding: 0
+  margin: 0
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+
+.header
+  padding: 30px
+  font-size: 65px
+  font-weight: 100
+  color: #fff
+  position: relative
+  background-color: #F8BBD0
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)
+  z-index: 2
+
+.main 
+  height: calc(100% - 136px)
+  width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+
+
+
+.music-player
+  width: 100%
+  height: 60px
+  background-color: #FCC3B2
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26)
+  position: fixed
+  bottom: 0
+  overflow: hidden
+  img
+    position: absolute
+    width: 100%
+    height: auto
+    top: 0
+    background-color: #212121
+    animation-duration: 20s
+    animation-fill-mode: both
+    animation-iteration-count: infinite
+    animation-name: slideUpDown
+    animation-direction: alternate
+    animation-timing-function: ease-in-out
+    filter: saturate(1.8) blur(8px) brightness(0.6)
+  .song-data-container 
+    width: 100%
+    height: 100%
+    position: relative
+    background-color: transparent
+    box-sizing: border-box
+    padding: 0 0 60px 0
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    overflow: hidden
+    color: #FCC3B2
+    .songTitle, .songArtist, .songAlbum 
+      width: 100%
+      padding: 2px
+      text-align: center
+  .player-controlls-toolbar 
+    width: 100%
+    height: 60px
+    border-top: 1px solid #d1d1d1
+    background-color: #F8BBD0
+    position: absolute
+    bottom: 0
+    left: 0
+    flex-direction: row
+    align-items: center
+    justify-content: flex-start
+    display: flex
+    .player-control-icons 
+      font-size: 35px
+      cursor: pointer
+      margin: 0 4px
+      color: #fff
+@keyframes slideUpDown 
+  from
+    transform: translate3d(0, -50%, 0)
+  to
+    transform: translate3d(0, 0, 0)
+
+
+audio
+  display: none
+  visibility: hidden
+
+
+.music-playlist 
+  width: 500px
+  height: 100%
+  position: relative
+  overflow: hidden
+  color: #fff
+  .song-list-container
+    width: 100%
+    height: 600px
+    display: block
+    overflow: hidden
+    padding: 0 90px
+    margin: 25px 0
+    .song-list-item
+      width: 100%
+      height: 60px
+      border-bottom: 1px solid #EEEEEE
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: flex-start
+      cursor: pointer
+      &:hover
+        background-color: rgba(255,255,255,0.2);
+      .song-album
+        height: 45px
+        width: 45px
+        line-height: 45px
+        img
+          width: 100%
+      .song-icon-container
+        font-size: 28px
+        background-color: #03A9F4
+        border-radius: 99px
+        height: 75px
+        width: 75px
+        z-index: -1
+        .song-icon 
+          font-size: 28px;
+      .song-data 
+        height: 100%
+        width: auto
+        padding: 0 20px
+        display: flex
+        flex-flow: column
+        align-items: flex-start
+        justify-content: center
+        .song-title 
+          font-size: 18px
+          line-height: 22px
+          font-weight: 700
+          color: #fff
+        .song-subtitle 
+          font-size: 20px
+          font-weight: 400
+          line-height: 22px
+          padding: 0 14px
+          color: #fff
+  
+
+
+
+
+ul 
+  text-align: right 
+  list-style-type: none
+  margin: 0
+  padding: 0
+  width: 200px
+  background-color: #f1f1f1
+
+
+li a 
+  display: block
+  color: #000
+  padding: 8px 16px
+  text-decoration: none
+
+
+li a.active 
+  background-color: #4CAF50
+  color: white
+
+
+li a:hover:not(.active) 
+  background-color: #555
+  color: white

@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <title>mg-audioPlayer</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="/images/og-image.png">
+    <meta property="og:title" content="mg-audioPlayer">
+    <meta property="og:description" content="">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- endbuild -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  </head>
+  <body ng-app="marysMusicApp">
+    <div class="header">
+      M/Player
+    </div>
+    <div class="main">
+
+      <div class="music-playlist" ng-controller="musicPlaylist">
+
+        <div class="header-container">
+        </div>
+
+        <div class="song-list-container">
+
+          <div class="song-list-item"" ng-repeat="song in playlist" ng-hide ng-click="onSongClick(song)">
+            <div class="song-album">
+              <img ng-src="{{song.albumCover}}">
+            </div>
+            <div class="song-data">
+              <div class="song-title">
+                 {{song.artist}}
+              </div>
+              <div class="song-subtitle">
+                {{song.title}}
+              </div>
+            </div>
+          </div>
+
+        </div>
+    
+      </div>
+
+      <div class="music-player" ng-controller="musicPlayer">
+        <div class="player-controlls-toolbar">
+          <i class="material-icons player-control-icons" ng-click="previousSong()">skip_previous</i>
+          <i class="material-icons player-control-icons" ng-click="playSong()" ng-if="showPlayButton">play_arrow</i>
+          <i class="material-icons player-control-icons" ng-click="pauseSong()" ng-if="!showPlayButton">pause</i>
+          <i class="material-icons player-control-icons" ng-click="nextSong()">skip_next</i>
+
+          <i class="material-icons player-control-icons" ng-click="muteVolume()" ng-if="showMuteButton">volume_up</i>
+          <i class="material-icons player-control-icons" ng-click="unmuteVolume()" ng-if="!showMuteButton">volume_off</i>
+        </div>
+        </div>
+        
+      </div>
+    </div>
+    <!-- TODO: change UA-XXXXX-X to be your site's ID. -->
+    <script>(function(e,t,n,r,i,s){e.GoogleAnalyticsObject=r;e[r]||(e[r]=function(){(e[r].q=e[r].q||[]).push(arguments)});e[r].l=+(new Date);i=t.createElement(n);s=t.getElementsByTagName(n)[0];i.src='//www.google-analytics.com/analytics.js';s.parentNode.insertBefore(i,s)})(window,document,'script','ga');ga('create','UA-XXXXX-X');ga('send','pageview')</script>
+
+    <script src="/scripts/main.js"></script>
+</body>
+</html>
