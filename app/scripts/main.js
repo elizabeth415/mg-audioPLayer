@@ -134,25 +134,25 @@ function QueueService($rootScope) {
   var currentSong;
   var queue = [ 
     {
-      songUrl: 'http://preview.d3egit56at4bzkt9xxj9zlai00j7zaor0h9yeyak8lelv7vi.box.codeanywhere.com/01_boyfriend.mp3',
+      songUrl: 'https://firebasestorage.googleapis.com/v0/b/lizbizz-af753.appspot.com/o/01_boyfriend.mp3?alt=media&token=7ff76be9-8088-40ee-9709-3745dbebcdc1',
       album:'Boyfriend',
       title:'Boyfriend',
       artist:'Best Coast',
-      albumCover: 'http://preview.d3egit56at4bzkt9xxj9zlai00j7zaor0h9yeyak8lelv7vi.box.codeanywhere.com/bestcoast.jpg'
+      albumCover: 'https://firebasestorage.googleapis.com/v0/b/lizbizz-af753.appspot.com/o/bestcoast.jpg?alt=media&token=efc16796-acd5-4d07-8b90-0b723f2deaa7'
     },
     {
-      songUrl: 'http://preview.d3egit56at4bzkt9xxj9zlai00j7zaor0h9yeyak8lelv7vi.box.codeanywhere.com/02_building_with.mp3',
+      songUrl: 'https://firebasestorage.googleapis.com/v0/b/lizbizz-af753.appspot.com/o/02_building_with.mp3?alt=media&token=73541767-1331-4145-ba0e-f1c4802afac5',
       album:'Entroducing',
       title:'Building steam with a grain of salt',
       artist:'DJ Shadow',
-      albumCover:'http://preview.d3egit56at4bzkt9xxj9zlai00j7zaor0h9yeyak8lelv7vi.box.codeanywhere.com/entroducing.jpg'
+      albumCover:'https://firebasestorage.googleapis.com/v0/b/lizbizz-af753.appspot.com/o/entroducing.jpg.jpg?alt=media&token=bfe3cb9e-8876-4ad1-94b5-79d019ed11a4'
     },
     {
-      songUrl: 'http://preview.d3egit56at4bzkt9xxj9zlai00j7zaor0h9yeyak8lelv7vi.box.codeanywhere.com/03_plus.mp3',
+      songUrl: 'https://firebasestorage.googleapis.com/v0/b/lizbizz-af753.appspot.com/o/03_plus.mp3?alt=media&token=83a32059-f59e-426c-8173-2c2c6aa7af81',
       album:'At Play vol.3',
       title:'Plus',
       artist:'Deadmau5',
-      albumCover:'http://preview.d3egit56at4bzkt9xxj9zlai00j7zaor0h9yeyak8lelv7vi.box.codeanywhere.com/deadmau5.jpg',
+      albumCover:'https://firebasestorage.googleapis.com/v0/b/lizbizz-af753.appspot.com/o/entroducing.jpg.jpg?alt=media&token=bfe3cb9e-8876-4ad1-94b5-79d019ed11a4',
     }];
   return {
     all: all,
