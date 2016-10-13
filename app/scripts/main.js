@@ -152,7 +152,7 @@ function QueueService($rootScope) {
       album:'At Play vol.3',
       title:'Plus',
       artist:'Deadmau5',
-      albumCover:'https://firebasestorage.googleapis.com/v0/b/lizbizz-af753.appspot.com/o/entroducing.jpg.jpg?alt=media&token=bfe3cb9e-8876-4ad1-94b5-79d019ed11a4',
+      albumCover:'https://firebasestorage.googleapis.com/v0/b/lizbizz-af753.appspot.com/o/deadmau5.jpg.jpg?alt=media&token=261e0048-d3ee-4803-a673-bb69da460ae0',
     }];
   return {
     all: all,
